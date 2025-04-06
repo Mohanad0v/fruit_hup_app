@@ -2,9 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruit_hub/core/utils/app_colors.dart';
-import 'package:fruit_hub/core/utils/size_config.dart';
 import 'package:fruit_hub/core/widgets/constants.dart';
-import 'package:fruit_hub/core/widgets/space_widget.dart';
 
 import '../utils/app_text_styles.dart';
 

@@ -18,25 +18,24 @@ class _PasswordFieldState extends State<PasswordField> {
   @override
   Widget build(BuildContext context) {
     return CustomTextFormField(
-      obscureText: obscureText,
-      onSaved: widget.onSaved,
-      hintText: 'كلمة المرور',
-      textInputType: TextInputType.visiblePassword,
-      suffixIcon: GestureDetector(
-        onTap: () {
-          obscureText = !obscureText;
-          setState(() {});
-        },
-        child: obscureText
-            ? const Icon(
-          Icons.remove_red_eye,
-          color: const Color(0xffC9CECF),
-        )
-        : const Icon(
-        Icons.visibility_off,
-        color: const Color(0xffC9CECF),
-      ),
-      )
-    );
+        obscureText: obscureText,
+        onSaved: widget.onSaved,
+        hintText: 'كلمة المرور',
+        textInputType: TextInputType.visiblePassword,
+        suffixIcon: GestureDetector(
+          onTap: () {
+            obscureText = !obscureText;
+            setState(() {});
+          },
+          child: obscureText
+              ? const Icon(
+                  Icons.remove_red_eye,
+                  color: const Color(0xffC9CECF),
+                )
+              : const Icon(
+                  Icons.visibility_off,
+                  color: const Color(0xffC9CECF),
+                ),
+        ));
   }
 }

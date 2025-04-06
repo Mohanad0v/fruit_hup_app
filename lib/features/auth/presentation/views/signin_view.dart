@@ -32,18 +32,15 @@ class SigninViewBodyConsumer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<SigninCubit, SigninState>(
-        listener: (context, state) {
-          if(state is SigninSuccess){}
-          if(state is SigninFailure){
-            buildErrorsBar(context, state.message);
-          }
-
-        },
-        builder: (context, state) {
-          return CustomProgressHud(
-              isLoading: state is SigninLoading ? true : false,
-              child: const SigninViewBody());
-        });
+    return BlocConsumer<SigninCubit, SigninState>(listener: (context, state) {
+      if (state is SigninSuccess) {}
+      if (state is SigninFailure) {
+        buildErrorsBar(context, state.message);
+      }
+    }, builder: (context, state) {
+      return CustomProgressHud(
+          isLoading: state is SigninLoading ? true : false,
+          child: const SigninViewBody());
+    });
   }
 }

@@ -10,7 +10,7 @@ import '../utils/app_text_styles.dart';
 class TermsAndConditions extends StatefulWidget {
   const TermsAndConditions({super.key, required this.onChanged});
 
-  final ValueChanged<bool>onChanged;
+  final ValueChanged<bool> onChanged;
 
   @override
   State<TermsAndConditions> createState() => _TermsAndConditionsState();
@@ -35,8 +35,7 @@ class _TermsAndConditionsState extends State<TermsAndConditions> {
           width: 16,
         ),
         Expanded(
-          child: Text.rich(
-              TextSpan(children: [
+          child: Text.rich(TextSpan(children: [
             TextSpan(
               text: 'من خلال إنشاء حساب ، فإنك توافق على',
               style: TextStyles.semiBold13.copyWith(
